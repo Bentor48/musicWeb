@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Угадай ноту</title>
+</head>
+<body>
+    <main>
+
+        <div id="window1ForStart">
+
+            <div id="welcome-container">
+                <h1>Угадай<br>ноту</h1>
+                <p>После нажатия на кнопку "Начать" вы услышите звук ноты. Ваша задача - угадать, какая нота была сыграна. Также вы можете настроить длительность воспроизведения.</p>
+            </div>
+
+            <div id="counter-container">
+                <label for="counter">Длительность<br>воспроизведения: <span id="counter-value">2</span> сек</label>
+                <input type="range" id="counter" name="counter" min="0.5" max="5" value="2" step="0.5">
+            </div>
+
+            <button id="start-btn">Начать</button>
+        </div>
+
+        <div id="window3ForPiano">
+
+            <button class="note-btn white-btn" data-note="11">Си</button>
+            <button class="note-btn black-btn" id="si-flat" data-note="10">Си♭/Ля#</button>
+            <button class="note-btn white-btn" data-note="9">Ля</button>
+            <button class="note-btn black-btn" id="sol-sharp" data-note="8">Соль#/Ля♭</button>
+            <button class="note-btn white-btn" data-note="7">Соль</button>
+            <button class="note-btn black-btn" id="fa-sharp" data-note="6">Фа#/Соль♭</button>
+            <button class="note-btn white-btn" data-note="5">Фа</button>
+            <button class="note-btn white-btn" data-note="4">Ми</button>
+            <button class="note-btn black-btn" id="mi-flat" data-note="3">Ми♭/Ре#</button>
+            <button class="note-btn white-btn" data-note="2">Ре</button>
+            <button class="note-btn black-btn" id="do-sharp" data-note="1">До#/Ре♭</button>
+            <button class="note-btn white-btn" data-note="0">До</button>
+
+        </div>
+    
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

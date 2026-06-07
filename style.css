@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
+:root {
+    --white: rgba(255, 255, 255, 0.8);
+    --black: rgb(0, 0, 0);
+    --transparent-black: rgba(0, 0, 0, 0.557);
+    --background: rgb(0, 15, 88);
+}
+
+html, 
+body {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 16px;
+    background: var(--background);
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.453);
+    color: var(--white);
+}
+
+/*Окно 1*/
+
+#window1ForStart {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+}
+
+#welcome-container > h1 {
+    font-size: 4rem;
+    margin-top: 15dvh;
+    margin-bottom: 5dvh;
+    text-align: center;
+}
+
+#welcome-container > p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 5px 0 5px;
+}
+
+#counter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 3vh 0;
+    font-size: 1.5rem;
+}
+
+/* Стили для ползунка */
+
+#counter {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 22vw;
+    height: 23vh;
+
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+
+    cursor: pointer;
+    background: transparent;
+}
+
+/* Стили для трека ползунка */
+
+#counter::-webkit-slider-runnable-track {
+    border-radius: 5vw;
+    background: var(--background);
+    border: 2px solid var(--white);
+}
+
+#counter::-moz-range-track {
+    border-radius: 5vw;
+    background: var(--background);
+    border: 2px solid var(--white);
+}
+
+/* Стили для ползунка */
+
+#counter::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 5vw;
+    height: 5vw;
+
+    border-radius: 50%;
+    background: var(--background);
+    border: 2px solid var(--white);
+
+    cursor: pointer;
+}
+
+#counter::-moz-range-thumb {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    background: var(--background);
+    border: 2px solid var(--white);
+
+    cursor: pointer;
+}
+
+#start-btn {
+    width: 80%;
+    height: 8vh;
+    border-radius: 10px;
+    background-color: var(--background);
+    border: 2px solid var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    align-self: center;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.453);
+    color: var(--white);
+}
+
+#start-btn:hover {
+    background-color: var(--white);
+    color: var(--background);
+}
+
+#start-btn:active {
+    background-color: var(--transparent-black);
+    color: var(--white);
+}
+
+/* Стили для окна с пианино */
+
+#window3ForPiano {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 2px solid var(--transparent-black);
+    display: none;
+}
+
+.white-btn {
+    height: 8vh;
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+    padding: 10px;
+    cursor: pointer;
+    text-align: right;
+    padding-right: 3vh;
+    position: relative;
+    z-index: 1;
+}
+
+.black-btn {
+    height: 6vh;
+    width: 55%;
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid var(--black);
+    cursor: pointer;
+    text-align: center;
+    max-width: 60%;
+    position: absolute;
+    z-index: 2;
+}
+        
+
+#si-flat {
+    top: 9%;
+}
+
+#sol-sharp {
+    top: 22.5%;
+}
+
+#fa-sharp {
+    bottom: 52%;
+}
+
+#mi-flat {
+    bottom: 23.5%;
+}
+
+#do-sharp {
+    bottom: 9%;
+}
