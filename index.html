@@ -11,13 +11,12 @@
 
         <div id="window1ForStart">
 
-            <div id="welcome-container">
-                <h1>Угадай<br>ноту</h1>
-                <p>После нажатия на кнопку "Начать" вы услышите звук ноты. Ваша задача - угадать, какая нота была сыграна. Также вы можете настроить длительность воспроизведения.</p>
-            </div>
+            <h1 id="welcome-containerh1">Угадай<br>ноту</h1>
+            <p id="welcome-containerp">После нажатия на кнопку "Начать" вы услышите звук ноты. Ваша задача - угадать, какая нота была сыграна. Также вы можете настроить длительность воспроизведения.</p>
+
 
             <div id="counter-container">
-                <label for="counter">Длительность<br>воспроизведения: <span id="counter-value">2</span> сек</label>
+                <label for="counter" id="counter-label">Длительность<br>воспроизведения: <span id="counter-value">2</span> сек</label>
                 <input type="range" id="counter" name="counter" min="0.5" max="5" value="2" step="0.5">
             </div>
 
