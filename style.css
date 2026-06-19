@@ -9,6 +9,8 @@
     --black: rgb(0, 0, 0);
     --transparent-black: rgba(0, 0, 0, 0.557);
     --background: rgb(0, 15, 88);
+    --footerColorText: #888;
+    --headerFontSize: 35px;
 }
 
 html, 
@@ -22,11 +24,32 @@ body {
     color: var(--white);
 }
 
+header {
+    height: 5dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#logo {
+    margin-top: 2dvh;
+    height: 5dvh;
+}
+
 /*Окно 1*/
 
 #window1ForStart {
     width: 100%;
-    min-height: 100dvh;
+    min-height: 86dvh;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -240,4 +263,39 @@ body {
 
 #do-sharp {
     bottom: 9%;
+}
+
+/*футер*/
+
+footer {
+    margin-bottom: 2dvh;
+    text-align: center;
+    color: var(--white);
+    font-size: clamp(0.2rem, 3vw, 3rem);
+    height: 5dvh;
+    border: none;
+    padding: 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2dvw;
+}
+
+.dot {
+    margin: 0 2dvw;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    color: inherit;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.github-link:hover {
+    opacity: 0.75;
+    transform: scale(1.1);
 }
