@@ -25,6 +25,7 @@ body {
 }
 
 header {
+    margin-top: 2dvh;
     height: 5dvh;
     display: flex;
     justify-content: center;
@@ -41,15 +42,14 @@ header a {
 }
 
 #logo {
-    margin-top: 2dvh;
     height: 5dvh;
 }
 
 /*Окно 1*/
 
-#window1ForStart {
+.fullWindow1 {
     width: 100%;
-    min-height: 86dvh;
+    min-height: 83dvh;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -206,6 +206,28 @@ header a {
 #start-btn:active {
     background-color: var(--transparent-black);
     color: var(--white);
+}
+
+/*Окно 2*/
+
+#window2ForTimer {
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#svgForStart {
+    width: 80dvw;
+    height: 25dvh;
+    display: flex;
+    
+}
+
+#timer {
+    height: 20dvh;
+    font-size: 10dvh;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 /* Стили для окна с пианино */
