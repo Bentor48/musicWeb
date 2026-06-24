@@ -351,3 +351,9 @@ footer {
     opacity: 0.75;
     transform: scale(1.1);
 }
+
+@media (orientation: landscape) {
+    body{
+        background:red;
+    }
+}
