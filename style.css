@@ -6,7 +6,9 @@
 
 :root {
     --white: rgba(255, 255, 255, 0.8);
+    --whiteForFocus: rgba(255, 255, 255, 0.600);
     --black: rgb(0, 0, 0);
+    --blackForFocus: rgba(0, 0, 0, 0.800);
     --transparent-black: rgba(0, 0, 0, 0.557);
     --background: rgb(0, 15, 88);
     --footerColorText: #888;
@@ -56,14 +58,14 @@ header a {
     justify-content: space-between;
 }
 
-#welcome-containerh1 {
+.containerh1 {
     font-size: clamp(1rem, 12vw, 5rem);
     margin-top: 10%;
     margin-bottom: 5%;
     text-align: center;
 }
 
-#welcome-containerp {
+.containerp {
     font-size: clamp(0.5rem, 5vw, 2rem);
     text-align: center;
     margin: 0 5px 0 5px;
@@ -184,7 +186,7 @@ header a {
     cursor: pointer;
 }
 
-#start-btn {
+.buttonForContine {
     width: 80%;
     height: 8dvh;
     border-radius: 10px;
@@ -198,12 +200,12 @@ header a {
     margin-bottom: 5%;
 }
 
-#start-btn:hover {
+.buttonForContine {
     background-color: var(--white);
     color: var(--background);
 }
 
-#start-btn:active {
+.buttonForContine {
     background-color: var(--transparent-black);
     color: var(--white);
 }
@@ -233,11 +235,15 @@ header a {
 /* Стили для окна с пианино */
 
 #window3ForPiano {
+    display: none;
+    justify-content: space-evenly;
+}
+
+#fortepiano {
     display: flex;
     flex-direction: column;
     position: relative;
     border: 2px solid var(--transparent-black);
-    display: none;
 }
 
 .white-btn {
@@ -251,6 +257,11 @@ header a {
     padding-right: 3vh;
     position: relative;
     z-index: 1;
+    border-radius: 0 10px 10px 0;
+}
+
+.white-btn:hover {
+    background-color: var(--whiteForFocus);
 }
 
 .black-btn {
@@ -264,8 +275,12 @@ header a {
     max-width: 60%;
     position: absolute;
     z-index: 2;
+    border-radius: 0 10px 10px 0;
 }
-        
+
+.black-btn:hover {
+    background-color: var(--blackForFocus);
+}
 
 #si-flat {
     top: 9%;
@@ -285,6 +300,21 @@ header a {
 
 #do-sharp {
     bottom: 9%;
+}
+
+/*окно результата*/
+
+#window4ForResult {
+    display: none;
+    align-items: center;
+}
+
+#correctNote {
+    margin: 10dvh 5dvw 5dvh 5dvw;
+}
+
+#textForResult {
+    font-size: clamp(1rem, 10vw, 3rem);
 }
 
 /*футер*/

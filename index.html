@@ -15,8 +15,8 @@
 
         <div id="window1ForStart" class="fullWindow1" >
 
-            <h1 id="welcome-containerh1">Угадай<br>ноту</h1>
-            <p id="welcome-containerp">После нажатия на кнопку "Начать" вы услышите звук ноты. Ваша задача - угадать, какая нота была сыграна. Также вы можете настроить длительность воспроизведения.</p>
+            <h1 id="welcome-containerh1" class="containerh1">Угадай<br>ноту</h1>
+            <p id="welcome-containerp" class="containerp">После нажатия на кнопку "Начать" вы услышите звук ноты. Ваша задача - угадать, какая нота была сыграна. Также вы можете настроить длительность воспроизведения.</p>
 
             <div id="noteA-container">
                 <label class="labelForWelcome" id="noteALabel" for="noteA">Услышать ноту Ля(А)</label>
@@ -28,7 +28,7 @@
                 <input type="range" id="counter" name="counter" min="1" max="4" value="2" step="1">
             </div>
 
-            <button id="start-btn">Начать</button>
+            <button class="buttonForContine" id="start-btn">Начать</button>
         </div>
 
         <div id="window2ForTimer" class="fullWindow1" style="display: none;">
@@ -36,21 +36,30 @@
             <p id="timer">3</p>
         </div>
 
-        <div id="window3ForPiano">
+        <div id="window3ForPiano" class="fullWindow1">
 
-            <button class="note-btn white-btn" data-note="11">Си</button>
-            <button class="note-btn black-btn" id="si-flat" data-note="10">Си♭/Ля#</button>
-            <button class="note-btn white-btn" data-note="9">Ля</button>
-            <button class="note-btn black-btn" id="sol-sharp" data-note="8">Соль#/Ля♭</button>
-            <button class="note-btn white-btn" data-note="7">Соль</button>
-            <button class="note-btn black-btn" id="fa-sharp" data-note="6">Фа#/Соль♭</button>
-            <button class="note-btn white-btn" data-note="5">Фа</button>
-            <button class="note-btn white-btn" data-note="4">Ми</button>
-            <button class="note-btn black-btn" id="mi-flat" data-note="3">Ми♭/Ре#</button>
-            <button class="note-btn white-btn" data-note="2">Ре</button>
-            <button class="note-btn black-btn" id="do-sharp" data-note="1">До#/Ре♭</button>
-            <button class="note-btn white-btn" data-note="0">До</button>
+            <div id="fortepiano">
+                <button class="note-btn white-btn" id="si" data-note="11">Си</button>
+                <button class="note-btn black-btn" id="si-flat" data-note="10">Си♭/Ля#</button>
+                <button class="note-btn white-btn" id="la" data-note="9">Ля</button>
+                <button class="note-btn black-btn" id="sol-sharp" data-note="8">Соль#/Ля♭</button>
+                <button class="note-btn white-btn" id="sol" data-note="7">Соль</button>
+                <button class="note-btn black-btn" id="fa-sharp" data-note="6">Фа#/Соль♭</button>
+                <button class="note-btn white-btn" id="fa" data-note="5">Фа</button>
+                <button class="note-btn white-btn" id="mi" data-note="4">Ми</button>
+                <button class="note-btn black-btn" id="mi-flat" data-note="3">Ми♭/Ре#</button>
+                <button class="note-btn white-btn" id="re" data-note="2">Ре</button>
+                <button class="note-btn black-btn" id="do-sharp" data-note="1">До#/Ре♭</button>
+                <button class="note-btn white-btn" id="do" data-note="0">До</button>
+            </div>
 
+            <button id="resultButton" class="buttonForContine">Проверить</button>
+        </div>
+
+        <div id="window4ForResult" class="fullWindow1">
+            <h1 id="correctNote" class="containerh1"></h1>
+            <p id="textForResult" class="containerp"></p>
+            <button onclick="location.reload()" class="buttonForContine">Попробовать ещё раз</button>
         </div>
         <script src="script.js"></script>
     </main>
