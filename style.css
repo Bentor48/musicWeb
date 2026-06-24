@@ -149,7 +149,7 @@ header a {
 /* Стили для трека ползунка */
 
 #counter::-webkit-slider-runnable-track {
-    border-radius: 5vw;
+    border-radius: 5dvw;
     background: var(--background);
     border: 2px solid var(--white);
 }
@@ -350,4 +350,80 @@ footer {
 .github-link:hover {
     opacity: 0.75;
     transform: scale(1.1);
+}
+
+@media only screen and (min-width: 901px), only screen and (max-width: 900px) and (orientation: landscape) {
+    body {
+        overflow-y: auto;
+    }
+    
+    header {
+        margin-top: 1dvw;
+        height: 3dvw;
+    }
+
+    #logo {
+        height: 3dvw;
+    }
+
+    #window1ForStart {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3dvh;
+    }
+
+    #welcome-containerp {
+        margin-top: 15%;
+        margin-bottom: 5%;
+    }
+
+    .containerh1 {
+        grid-row: span 4;
+    }
+
+    #welcome-containerh1 {
+        font-size: clamp(1rem, 20dvh, 30rem);
+    }
+
+    #welcome-containerp {
+        font-size: clamp(0.5rem, 3.5dvh, 20rem);
+    }
+
+    #counter::-webkit-slider-thumb {
+        width: 5dvh;
+        height: 5dvh;
+    }
+
+    #counter::-moz-range-thumb {
+        width: 5dvh;
+        height: 5dvh;
+    }
+
+    #counter {
+        width: 5dvw;
+        height: 20dvh;
+    }
+
+    #start-btn {
+        margin: 0;
+        margin-left: 10%;
+    }
+
+    #noteALabel {
+        font-size: clamp(0.5rem, 3.5dvh, 20rem);
+    }
+
+    #counter-label {
+        font-size: clamp(0.5rem, 3.5dvh, 20rem);
+    }
+
+    .footer {
+        font-size: clamp(0.5rem, 3dvh, 6rem);
+        margin-bottom: 1dvh;
+    }
+
+    #svgGitHub {
+        width: 1.5em;
+        height: 1.5em;
+    }
 }
