@@ -314,7 +314,7 @@ header a {
 }
 
 #textForResult {
-    font-size: clamp(1rem, 10vw, 3rem);
+    font-size: clamp(2rem, 7vw, 3rem);
 }
 
 /*футер*/
