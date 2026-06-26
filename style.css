@@ -426,4 +426,61 @@ footer {
         width: 1.5em;
         height: 1.5em;
     }
+
+    #fortepiano {
+        display: flex;
+        flex-direction: row-reverse;
+        align-self: center;
+        width: 80%;
+        height: 60dvh
+    }
+
+    .white-btn{
+        height: 100%;
+        width: 14.28%;
+        padding: 0;
+        border-radius: 0 0 10px 10px;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 3dvh;
+    }
+
+    .black-btn {
+        height: 55%;
+        width: 12.28%;
+        top: auto;
+        bottom: auto;
+        border-radius: 0 0 10px 10px;
+    }
+
+    #si-flat {
+        top: 0;
+        right: 8.1%;
+    }
+
+    #sol-sharp {
+        top: 0;
+        right: 22%;
+    }
+
+    #fa-sharp {
+        top: 0;
+        right: 36.7%;
+    }
+
+    #mi-flat {
+        top: 0;
+        left: 22.5%;
+    }
+
+    #do-sharp {
+        top: 0;
+        left: 8.1%;
+    }
+
+    .buttonForContine {
+        margin: 0;
+    }
 }
