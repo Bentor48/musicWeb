@@ -389,8 +389,8 @@ footer {
     }
 
     #counter {
-        width: 5vw;
-        height: 20vh;
+        width: 15vw;
+        height: 10vh;
         transform: none;
         writing-mode: horizontal-tb;;
     }
