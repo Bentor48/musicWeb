@@ -243,7 +243,6 @@ header a {
     display: flex;
     flex-direction: column;
     position: relative;
-    border: 2px solid var(--transparent-black);
 }
 
 .white-btn {
@@ -352,7 +351,142 @@ footer {
     transform: scale(1.1);
 }
 
-@media only screen and (min-width: 901px), only screen and (max-width: 900px) and (orientation: landscape) {
+@media  (orientation: landscape) and (pointer: coarse) {
+    body {
+        overflow-y: auto;
+    }
+
+    header {
+        margin-top: 1vw;
+        height: 3vw;
+    }
+
+    #logo {
+        height: 3vw;
+    }
+
+    #window1ForStart {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3vh;
+    }
+
+    #welcome-containerp {
+        margin-top: 15%;
+        margin-bottom: 5%;
+    }
+
+    .containerh1 {
+        grid-row: span 4;
+    }
+
+    #welcome-containerh1 {
+        font-size: clamp(1rem, 20vh, 30rem);
+    }
+
+    #welcome-containerp {
+        font-size: clamp(0.5rem, 3.5vh, 20rem);
+    }
+
+    #counter::-webkit-slider-thumb {
+        width: 5vh;
+        height: 5vh;
+    }
+
+    #counter::-moz-range-thumb {
+        width: 5vh;
+        height: 5vh;
+    }
+
+    #counter {
+        width: 5vw;
+        height: 20vh;
+    }
+
+    #start-btn {
+        margin: 0;
+        margin-left: 10%;
+    }
+
+    #noteALabel {
+        font-size: clamp(0.5rem, 3.5vh, 20rem);
+    }
+
+    #counter-label {
+        font-size: clamp(0.5rem, 3.5vh, 20rem);
+    }
+
+    .footer {
+        font-size: clamp(0.5rem, 3vh, 6rem);
+        margin-bottom: 1vh;
+    }
+
+    #svgGitHub {
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    #fortepiano {
+        display: flex;
+        flex-direction: row-reverse;
+        align-self: center;
+        width: 80%;
+        height: 60vh
+    }
+
+    .white-btn{
+        height: 100%;
+        width: 14.28%;
+        padding: 0;
+        border-radius: 0 0 10px 10px;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 3vh;
+    }
+
+    .black-btn {
+        height: 55%;
+        width: 12.28%;
+        top: auto;
+        bottom: auto;
+        border-radius: 0 0 10px 10px;
+    }
+
+    #si-flat {
+        top: 0;
+        right: 8.1%;
+    }
+
+    #sol-sharp {
+        top: 0;
+        right: 22%;
+    }
+
+    #fa-sharp {
+        top: 0;
+        right: 36.7%;
+    }
+
+    #mi-flat {
+        top: 0;
+        left: 22.5%;
+    }
+
+    #do-sharp {
+        top: 0;
+        left: 8.1%;
+    }
+
+    .buttonForContine {
+        margin: 0;
+    }
+
+    
+}
+
+@media only screen and (min-width: 1024px) {
     body {
         overflow-y: auto;
     }
