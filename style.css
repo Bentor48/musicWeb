@@ -201,11 +201,6 @@ header a {
 }
 
 .buttonForContine {
-    background-color: var(--white);
-    color: var(--background);
-}
-
-.buttonForContine {
     background-color: var(--transparent-black);
     color: var(--white);
 }
@@ -388,6 +383,18 @@ footer {
         font-size: clamp(0.5rem, 3.5vh, 20rem);
     }
 
+    #noteA {
+        width: 7vh;
+        height: 7vh;
+    }
+
+    #counter {
+        width: 5vw;
+        height: 20vh;
+        transform: none;
+        writing-mode: none;
+    }
+
     #counter::-webkit-slider-thumb {
         width: 5vh;
         height: 5vh;
@@ -398,10 +405,15 @@ footer {
         height: 5vh;
     }
 
-    #counter {
-        width: 5vw;
-        height: 20vh;
+
+    #counter::-webkit-slider-runnable-track {
+        border-radius: 5vw;
     }
+
+    #counter::-moz-range-track {
+        border-radius: 5vw;
+    }
+
 
     #start-btn {
         margin: 0;
@@ -481,6 +493,8 @@ footer {
 
     .buttonForContine {
         margin: 0;
+        height: 8vh;
+        font-size: 3vh;
     }
 
     
