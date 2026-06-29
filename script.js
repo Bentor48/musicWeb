@@ -266,7 +266,12 @@ const failMessages = [
 
 function checkResuit () {
     window3ForPiano.style.display = 'none';
-    window4ForResult.style.display = 'flex';
+
+    if(window.matchMedia("(orientation: landscape) and (pointer: coarse)").matches || window.matchMedia("(min-width: 1024px").matches) {
+        window4ForResult.style.display = 'grid';
+    } else {
+        window4ForResult.style.display = 'flex';
+    }
 
     // Параграф результата
     const textForResult = document.getElementById('textForResult');

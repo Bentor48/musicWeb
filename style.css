@@ -190,7 +190,6 @@ header a {
     width: 80%;
     height: 8dvh;
     border-radius: 10px;
-    background-color: var(--background);
     border: 2px solid var(--white);
     font-size: 3dvh;
     cursor: pointer;
@@ -198,9 +197,6 @@ header a {
     text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.453);
     color: var(--white);
     margin-bottom: 5%;
-}
-
-.buttonForContine {
     background-color: var(--transparent-black);
     color: var(--white);
 }
@@ -416,7 +412,7 @@ footer {
 
 
     #start-btn {
-        margin: 0;
+        margin: 0 auto;
         margin-left: 10%;
     }
 
@@ -493,11 +489,28 @@ footer {
 
     .buttonForContine {
         margin: 0;
-        height: 8vh;
+        height: 10vh;
         font-size: 3vh;
+        grid-column: span 2;
     }
 
-    
+    #window4ForResult {
+        display: none;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3vh;
+    }
+
+    #textForResult {
+        max-width: 55vh;
+        margin: 12vh auto 0 auto;
+        font-size: clamp(0.5rem, 5vw, 3.5rem);
+    } 
+
+    #restartBNT {
+        grid-column: span 2;
+        margin: 0 auto;
+    }
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -525,12 +538,10 @@ footer {
         margin-bottom: 5%;
     }
 
-    .containerh1 {
-        grid-row: span 4;
-    }
 
     #welcome-containerh1 {
         font-size: clamp(1rem, 20dvh, 30rem);
+        grid-row: span 4;
     }
 
     #welcome-containerp {
@@ -630,5 +641,22 @@ footer {
 
     .buttonForContine {
         margin: 0;
+    }
+
+    #window4ForResult {
+        display: none;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3dvh;
+    }
+
+    #textForResult {
+        max-width: 55vh;
+        margin: 12vh auto 0 auto;
+        font-size: clamp(0.5rem, 5vw, 3.5rem);
+    } 
+
+    #restartBNT {
+        grid-column: span 2;
+        margin: 0 auto;
     }
 }
