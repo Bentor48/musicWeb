@@ -500,6 +500,10 @@ footer {
         gap: 3vh;
     }
 
+    #correctNote {
+        font-size: clamp(2rem, 5vw, 6rem);
+    }
+
     #textForResult {
         max-width: 55vh;
         margin: 12vh auto 0 auto;
@@ -510,7 +514,6 @@ footer {
         grid-column: span 2;
         margin: 0 auto;
     }
-
 }
 
 @media only screen and (min-width: 1024px) {
