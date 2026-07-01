@@ -66,11 +66,12 @@ function playNoteA() {
 
     oscillator.start();
 
-    svgForStart.src = 'image/forkLight.svg';
+    
     svgForStart.alt = 'Метроном издаёт звук';
-    timerP.innerText = 'Ля(A)'
-
-
+    timerP.innerText = 'Ля(A)';
+    if (localStorage.getItem('theme') === 'dark') svgForStart.src = 'image/forkLight.svg';
+    else svgForStart.src = 'image/forkDark.svg';
+        
     setTimeout(() => {
         oscillator.stop();
         audioContext.close();
@@ -150,7 +151,9 @@ startBNT.addEventListener('click', () => {
     }
 
     function startRandomNote() {
-        svgForStart.src = 'image/ListenLight.svg';
+
+        if (localStorage.getItem('theme') === 'dark') svgForStart.src = 'image/ListenLight.svg';
+        else svgForStart.src = 'image/ListenDark.svg';
         svgForStart.alt = 'Человек внимательно слушает музыку';
         svgForStart.style.display = 'flex';
         timerP.style.display = 'none';
@@ -206,11 +209,15 @@ function startPiano() {
 
             whiteBtn.forEach(button => {
                 button.style.backgroundColor = 'var(--white)';
+                button.style.color = "";
             });
                 
             blackBtn.forEach(button => {
                 button.style.backgroundColor = 'var(--black)';
+                button.style.color = "";
             });
+
+            if (localStorage.getItem('theme') === 'light') button.style.color = 'var(--white)';
 
             button.style.backgroundColor = 'var(--whiteForFocus)';
             keyForResult = button.dataset.note;
@@ -224,12 +231,15 @@ function startPiano() {
 
             whiteBtn.forEach(button => {
                 button.style.backgroundColor = 'var(--white)';
+                button.style.color = "";
             });
                 
             blackBtn.forEach(button => {
                 button.style.backgroundColor = 'var(--black)';
+                button.style.color = "";
             });
 
+            if (localStorage.getItem('theme') === 'light') button.style.color = 'var(--black)';
             button.style.backgroundColor = 'var(--blackForFocus)';
             keyForResult = button.dataset.note;
         });

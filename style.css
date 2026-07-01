@@ -6,13 +6,29 @@
 
 :root {
     --white: rgba(255, 255, 255, 0.8);
+    --colorForText: rgba(255, 255, 255, 0.8);
     --whiteForFocus: rgba(255, 255, 255, 0.600);
     --black: rgb(0, 0, 0);
     --blackForFocus: rgba(0, 0, 0, 0.800);
-    --transparent-black: rgba(0, 0, 0, 0.557);
+    --forContinueBTN: rgba(0, 0, 0, 0.557);
     --background: rgb(0, 15, 88);
-    --footerColorText: #888;
     --headerFontSize: 35px;
+}
+
+[data-theme="light"] {
+    --white: rgba(255, 255, 255, 0.8);
+    --colorForText: rgba(0, 0, 0, 0.883);
+    --whiteForFocus: rgba(94, 94, 94, 0.757);
+    --black: rgb(0, 0, 0);
+    --blackForFocus: rgb(217, 217, 217);
+    --forContinueBTN: rgba(214, 214, 214, 0.422);
+    --background: rgb(237, 237, 237);
+}
+
+[data-theme="light"] p,
+[data-theme="light"] h1,
+[data-theme="light"] button {
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.453);
 }
 
 html, 
@@ -23,7 +39,7 @@ body {
     font-size: 16px;
     background: var(--background);
     text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.453);
-    color: var(--white);
+    color: var(--colorForText);
 }
 
 header {
@@ -58,6 +74,33 @@ header a {
     justify-content: space-between;
 }
 
+/*Кнопки настроки*/
+
+#settings {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3vw;
+    align-items: center;
+}
+
+.setBTN {
+    height: 6dvh;
+    width: 6dvh;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--black);
+    border: 1px solid var(--white);
+    color: var(--white);
+    font-size: 1.4rem;
+    align-items: center;
+    padding: 0;
+}
+
+
+#theme {
+    margin-right: 3vw;
+}
+
 .containerh1 {
     font-size: clamp(1rem, 12vw, 5rem);
     margin-top: 10%;
@@ -88,7 +131,7 @@ header a {
     appearance: none;
     -webkit-appearance: none;
 
-    border: 2px solid var(--white);
+    border: 2px solid var(--colorForText);
     border-radius: 50%;
 
     background: transparent;
@@ -107,7 +150,7 @@ header a {
 
     border-radius: 50%;
 
-    background-color: var(--white);
+    background-color: var(--colorForText);
 
     top: 50%;
     left: 50%;
@@ -151,13 +194,13 @@ header a {
 #counter::-webkit-slider-runnable-track {
     border-radius: 5dvw;
     background: var(--background);
-    border: 2px solid var(--white);
+    border: 2px solid var(--colorForText);
 }
 
 #counter::-moz-range-track {
     border-radius: 5dvw;
     background: var(--background);
-    border: 2px solid var(--white);
+    border: 2px solid var(--colorForText);
 }
 
 /* Стили для ползунка */
@@ -171,7 +214,7 @@ header a {
 
     border-radius: 50%;
     background: var(--background);
-    border: 2px solid var(--white);
+    border: 2px solid var(--colorForText);
 
     cursor: pointer;
 }
@@ -181,7 +224,7 @@ header a {
     height: 5dvw;
     border-radius: 50%;
     background: var(--background);
-    border: 2px solid var(--white);
+    border: 2px solid var(--colorForText);
 
     cursor: pointer;
 }
@@ -190,15 +233,14 @@ header a {
     width: 80%;
     height: 8dvh;
     border-radius: 10px;
-    border: 2px solid var(--white);
+    border: 2px solid var(--colorForText);
     font-size: 3dvh;
     cursor: pointer;
     align-self: center;
     text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.453);
-    color: var(--white);
+    color: var(--colorForText);
     margin-bottom: 5%;
-    background-color: var(--transparent-black);
-    color: var(--white);
+    background-color: var(--forContinueBTN);
 }
 
 /*Окно 2*/
@@ -250,10 +292,6 @@ header a {
     border-radius: 0 10px 10px 0;
 }
 
-.white-btn:hover {
-    background-color: var(--whiteForFocus);
-}
-
 .black-btn {
     height: 6vh;
     width: 55%;
@@ -266,10 +304,6 @@ header a {
     position: absolute;
     z-index: 2;
     border-radius: 0 10px 10px 0;
-}
-
-.black-btn:hover {
-    background-color: var(--blackForFocus);
 }
 
 #si-flat {
@@ -312,7 +346,7 @@ header a {
 footer {
     margin-bottom: 2dvh;
     text-align: center;
-    color: var(--white);
+    color: var(--colorForText);
     font-size: clamp(0.2rem, 3vw, 3rem);
     height: 5dvh;
     border: none;

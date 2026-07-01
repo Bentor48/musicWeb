@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,8 @@
 
     <main>
 
-        <div id="window1ForStart" class="fullWindow1" >
+        <div id="window1ForStart" class="fullWindow1">
+            <div id="settings"></div>
 
             <h1 id="welcome-containerh1" class="containerh1">Угадай<br>ноту</h1>
             <p id="welcome-containerp" class="containerp">После нажатия на кнопку "Начать" вы услышите звук ноты. Ваша задача - угадать, какая нота была сыграна. Также вы можете настроить длительность воспроизведения.</p>
@@ -57,10 +58,11 @@
         </div>
 
         <div id="window4ForResult" class="fullWindow1">
-            <h1 id="correctNote" class="containerh1" id="resultNote"></h1>
-            <p id="textForResult" class="containerp" id="quote"></p>
+            <h1 id="correctNote" class="containerh1"></h1>
+            <p id="textForResult" class="containerp"></p>
             <button id="restartBNT" onclick="location.reload()" class="buttonForContine">Попробовать ещё раз</button>
         </div>
+        <script src="scriptForTheme.js"></script>
         <script src="script.js"></script>
     </main>
 
